@@ -66,6 +66,6 @@ else
     # Send magic packet
     printf "Sending magic packet..." 
     echo -e $magicpacket | nc -w1 -u -b $targetip $targetport
-    printf " Done!"
+    printf " Done!\r\n"
     
 fi
