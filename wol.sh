@@ -1,5 +1,5 @@
-# WoL.sh
-# Project homepage: https://leesteve.tk/wol.sh
+# wol.sh
+# Project homepage: https://github.com/leestevetk/wol.sh
 # Version 0.1 (20200302) (Pre-release)
 
 # MIT License

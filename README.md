@@ -1,31 +1,32 @@
-# WoL.sh
-WoL.sh is a simple Wake-on-LAN shell script.
+# wol.sh
+wol.sh is a simple Wake-on-LAN shell script.
 
-- [Download](#download)
-- [Compatibility](#compatibility)
-- [Before Use](#before-use)
-- [Syntax](#syntax)
-- [Examples](#examples)
-- [Why WoL.sh?](#why-wolsh)
-- [What is Wake-on-LAN or Wake-on-WLAN?](#what-is-wake-on-lan-or-wake-on-wlan)
-- [Licence](#licence)
+- [wol.sh](#wolsh)
+  - [Download](#download)
+  - [Compatibility](#compatibility)
+  - [Before Use](#before-use)
+  - [Syntax](#syntax)
+  - [Examples](#examples)
+  - [Why wol.sh](#why-wolsh)
+  - [What is Wake-on-LAN or Wake-on-WLAN?](#what-is-wake-on-lan-or-wake-on-wlan)
+  - [Licence](#licence)
 
 ## Download
-- [Download the latest version of WoL.sh (0.1)](https://github.com/leestevetk/WoL.sh/releases/download/v0.1/WoL.sh) or [browse older versions](https://github.com/leestevetk/WoL.sh/releases).
-- __DISCLAIMER:__ WoL.sh is currently at pre-release stage - users should exercise caution.
+- [Download the latest version of wol.sh (0.1)](https://github.com/leestevetk/wol.sh/releases/download/v0.1/WoL.sh) or [browse older versions](https://github.com/leestevetk/wol.sh/releases).
+- __DISCLAIMER:__ wol.sh is currently at pre-release stage - users should exercise caution.
 
 ## Compatibility
-WoL.sh should *(but is not guaranteed to)* work on most __Mac__ or __Linux__ systems.  The author is using this utility on a macOS 10.15.3 system to wake up a Windows 10 PC, both on Wi-Fi.
+wol.sh should *(but is not guaranteed to)* work on most __Mac__ or __Linux__ systems.  The author is using this utility on a macOS 10.15.3 system to wake up a Windows 10 PC, both on Wi-Fi.
 
 ## Before Use
-Like any shell script, you must first make WoL.sh executable.  This can be done by running in terminal (assuming WoL.sh is located at `~/Desktop/WoL.sh`):
+Like any shell script, you must first make wol.sh executable.  This can be done by running in terminal (assuming wol.sh is located at `~/Desktop/wol.sh`):
 ```
-chmod u+x ~/Desktop/WoL.sh
+chmod u+x ~/Desktop/wol.sh
 ```
 
 ## Syntax
 ```
-WoL.sh [MAC] [IP] [Port]
+wol.sh [MAC] [IP] [Port]
 ```
 - `MAC`: __mandatory__, MAC address of the target machine
 - `IP`: recommeded, the magic packet will be sent to this IP, default: 255.255.255.255 (broadcast to all IPs)
@@ -35,40 +36,40 @@ WoL.sh [MAC] [IP] [Port]
 
 ### Example 1 (Recommended)
 ```
-~/Desktop/WoL.sh 0F:1E:2D:3C:4B:5A 192.168.1.100
+~/Desktop/wol.sh 0F:1E:2D:3C:4B:5A 192.168.1.100
 ```
 In this example:
-- WoL.sh is located at `~/Desktop/WoL.sh`.
+- wol.sh is located at `~/Desktop/wol.sh`.
 - The target computer's MAC address is `0F:1E:2D:3C:4B:5A`.
 - This command will send a magic packet to `192.168.1.100` at port `9` (usual port for magic packets).  
 
 ### Example 2
 ```
-~/Desktop/WoL.sh 0F:1E:2D:3C:4B:5A 192.168.1.100 9000
+~/Desktop/wol.sh 0F:1E:2D:3C:4B:5A 192.168.1.100 9000
 ```
 In this example:
-- WoL.sh is located at `~/Desktop/WoL.sh`.
+- wol.sh is located at `~/Desktop/wol.sh`.
 - The target computer's MAC address is `0F:1E:2D:3C:4B:5A`.
 - This command will send a magic packet to `192.168.1.100` at port `9000`.  It is usually unnecessary to specify the port unless port 9 of the target is blocked (e.g. by a firewall).
 
 ## Example 3
 ```
-~/Desktop/WoL.sh 0F:1E:2D:3C:4B:5A
+~/Desktop/wol.sh 0F:1E:2D:3C:4B:5A
 ```
 In this example:
-- WoL.sh is located at `~/Desktop/WoL.sh`.
+- wol.sh is located at `~/Desktop/wol.sh`.
 - The target computer's MAC address is `0F:1E:2D:3C:4B:5A`.
 - This command will broadcast a magic packet to all systems at port `9`.
 - __This command has not been tested.__
 
-## Why WoL.sh
-__WoL.sh does not require installation.__  Most authors on the web recommend dedicated programs to perform Wake-on-LAN. A common example is "wakeonlan" for Macs.  These programs are well-tested and probably contain more features than WoL.sh.  But there are many scenarios where installing a program is inappropriate or not allowed (e.g. on a company machine) or there may be  concerns over installing new software.
+## Why wol.sh
+__wol.sh does not require installation.__  Most authors on the web recommend dedicated programs to perform Wake-on-LAN. A common example is "wakeonlan" for Macs.  These programs are well-tested and probably contain more features than wol.sh.  But there are many scenarios where installing a program is inappropriate or not allowed (e.g. on a company machine) or there may be  concerns over installing new software.
 
 ## What is Wake-on-LAN or Wake-on-WLAN?
 A computer can be configured to wake from sleep when it receieves a special network message known as a "Magic Packet".  This technique is known as "Wake-on-LAN" (for a computer using a wired connection) or "Wake-on-WLAN" (for a computer using a wireless connection).  Read more on https://en.wikipedia.org/wiki/Wake-on-LAN
 
 ## Licence
-WoL.sh is distributed under the MIT License.
+wol.sh is distributed under the MIT License.
 ```
 MIT License
 
